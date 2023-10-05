@@ -17,11 +17,21 @@ import {
   getCartItemsFromLocalStorage,
   saveCartItemsToLocalStorage,
 } from "../localStorageUtils";
+import { Icon } from "@iconify/react";
 
 const foodMenu = [
-  { id: 1, name: "Frango", price: "5,99", image: frango },
+  { id: 1, name: "Frango com catupiry", price: "5,99", image: frango },
   { id: 2, name: "Carne", price: "6,49", image: carne },
-  { id: 4, name: "Camarão", price: "8,50", image: camarao },
+  { id: 3, name: "Camarão", price: "8,50", image: camarao },
+  { id: 4, name: "Calabresa", price: "5,99", image: calabresa },
+  { id: 5, name: "Queijo", price: "6,20", image: queijo },
+  { id: 6, name: "Tomate seco", price: "5,99", image: tomate },
+  { id: 7, name: "Palmito", price: "6,99", image: palmito },
+  { id: 8, name: "Frango com cenoura", price: "5,80", image: cenoura },
+  { id: 9, name: "Alho-poró e palmito", price: "8,99", image: alho },
+  { id: 10, name: "Shitake com palmito", price: "9,99", image: shitake },
+  { id: 11, name: "Espinafre com cenoura", price: "7,99", image: espinafre },
+  { id: 12, name: "Grão de bico e queijo", price: "6,50", image: grao },
 ];
 
 export default function Empadas() {
@@ -31,6 +41,7 @@ export default function Empadas() {
     const updatedCartItems = [...cartItems, food];
     setCartItems(updatedCartItems);
     saveCartItemsToLocalStorage(updatedCartItems);
+    alert("item adicionado")
   };
 
   return (
@@ -87,122 +98,6 @@ export default function Empadas() {
         <div className="littleCarrinho" style={{ position: "fixed", backgroundColor:"#DEB852", width:"100%", height:"50px", bottom:"0", alignItems:"center", justifyContent:"center", display:"flex" }}>
           <a style={{ textDecoration:'none', color:"black", fontSize:"20px"}} href="./carrinho">Ir para o carrinho</a>
         </div>
-      {/* 
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={camarao} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Camarão</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$8,50</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={calabresa} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Calabresa</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={queijo} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Queijo</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$6,20</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={tomate} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Tomate seco com mussarela</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-            </div>
-
-        
-
-            <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={palmito} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Palmito</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$6,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={cenoura} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Frango com cenoura</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,80</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={shitake} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Vegana de shitake com palmito</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$8,50</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={alho} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Vegana de alho-poró e palmito</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={espinafre} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Vegetariana de espinafre com cenoura</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$6,20</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={grao} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Grão de bico e queijo</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-</div> */}
     </div>
   );
 }

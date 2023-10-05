@@ -20,9 +20,18 @@ import {
 } from "../localStorageUtils";
 
 const foodMenu = [
-  { id: 1, name: "Chocolate ao leite", price: "20,30", image: leite },
-  { id: 2, name: "Chocolate Branco", price: 10, image: branco },
-  { id: 3, name: "Rosa", price: 30, image: rosa },
+  { id: 1, name: "Chocolate ao leite", price: "9,30", image: leite },
+  { id: 2, name: "Chocolate Branco", price: '9,30', image: branco },
+  { id: 3, name: "Morango", price: '10,99', image: rosa },
+  { id: 4, name: "Doce de leite", price: '9,00', image: doce },
+  { id: 5, name: "Brigadeiro", price: '9,00', image: brigadeiro },
+  { id: 6, name: "M&M", price: '11,49', image: mm },
+  { id: 7, name: "Frutas vermelhas", price: '11,99', image: vermelhas },
+  { id: 8, name: "Recheado com chocolate", price: '10,50', image: recheado },
+  { id: 9, name: "Avelã", price: '12,99', image: avela },
+  { id: 10, name: "Oreo", price: '12,99', image: oreo },
+  { id: 11, name: "Manga", price: '10,99', image: manga },
+  { id: 12, name: "Ninho com chocolate", price: '11,50', image: ninho },
 ];
 
 export default function Roscas() {
@@ -32,6 +41,7 @@ export default function Roscas() {
     const updatedCartItems = [...cartItems, food];
     setCartItems(updatedCartItems);
     saveCartItemsToLocalStorage(updatedCartItems);
+    alert("item adicionado")
   }; 
   return (
     <div>
