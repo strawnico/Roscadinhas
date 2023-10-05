@@ -4,12 +4,12 @@ import branco from "../assets/branco.jpg";
 import doce from "../assets/doce.jpg";
 import brigadeiro from "../assets/brigadeiro.jpg";
 import rosa from "../assets/rosa.jpg";
-import mm from "../assets/mm2.jpg";
+import chocomenta from "../assets/chocomenta.jpg";
 import vermelhas from "../assets/vermelhas.jpg";
 import recheado from "../assets/recheado.jpg";
 import avela from "../assets/avela.png";
 import oreo from "../assets/oreo.png";
-import manga from "../assets/manga.jpg";
+import canela from "../assets/canela.jpg";
 import ninho from "../assets/ninho.jpg";
 import { Icon } from "@iconify/react";
 import Item from "./item";
@@ -21,16 +21,16 @@ import {
 
 const foodMenu = [
   { id: 1, name: "Chocolate ao leite", price: "9,30", image: leite },
-  { id: 2, name: "Chocolate Branco", price: '9,30', image: branco },
+  { id: 2, name: "Limão", price: '9,30', image: branco },
   { id: 3, name: "Morango", price: '10,99', image: rosa },
   { id: 4, name: "Doce de leite", price: '9,00', image: doce },
   { id: 5, name: "Brigadeiro", price: '9,00', image: brigadeiro },
-  { id: 6, name: "M&M", price: '11,49', image: mm },
+  { id: 6, name: "Chocomenta", price: '11,49', image: chocomenta },
   { id: 7, name: "Frutas vermelhas", price: '11,99', image: vermelhas },
   { id: 8, name: "Recheado com chocolate", price: '10,50', image: recheado },
   { id: 9, name: "Avelã", price: '12,99', image: avela },
   { id: 10, name: "Oreo", price: '12,99', image: oreo },
-  { id: 11, name: "Manga", price: '10,99', image: manga },
+  { id: 11, name: "Açúcar com canela", price: '10,99', image: canela },
   { id: 12, name: "Ninho com chocolate", price: '11,50', image: ninho },
 ];
 

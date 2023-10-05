@@ -17,16 +17,15 @@ import {
   getCartItemsFromLocalStorage,
   saveCartItemsToLocalStorage,
 } from "../localStorageUtils";
-import { Icon } from "@iconify/react";
 
 const foodMenu = [
-  { id: 1, name: "Frango com catupiry", price: "5,99", image: frango },
-  { id: 2, name: "Carne", price: "6,49", image: carne },
+  { id: 1, name: "Frango com requeijão", price: "5,99", image: frango },
+  { id: 2, name: "Carne seca", price: "6,49", image: carne },
   { id: 3, name: "Camarão", price: "8,50", image: camarao },
   { id: 4, name: "Calabresa", price: "5,99", image: calabresa },
-  { id: 5, name: "Queijo", price: "6,20", image: queijo },
+  { id: 5, name: "4 queijo", price: "6,20", image: queijo },
   { id: 6, name: "Tomate seco", price: "5,99", image: tomate },
-  { id: 7, name: "Palmito", price: "6,99", image: palmito },
+  { id: 7, name: "Palmito com catupiry", price: "6,99", image: palmito },
   { id: 8, name: "Frango com cenoura", price: "5,80", image: cenoura },
   { id: 9, name: "Alho-poró e palmito", price: "8,99", image: alho },
   { id: 10, name: "Shitake com palmito", price: "9,99", image: shitake },
