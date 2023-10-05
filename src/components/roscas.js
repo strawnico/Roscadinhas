@@ -20,9 +20,9 @@ import {
 } from "../localStorageUtils";
 
 const foodMenu = [
-  { id: 1, name: "aaaaaaaaa", price: "20,30", image: leite },
-  { id: 2, name: "carne", price: 10, image: branco },
-  { id: 3, name: "camarao", price: 30, image: rosa },
+  { id: 1, name: "Chocolate ao leite", price: "20,30", image: leite },
+  { id: 2, name: "Chocolate Branco", price: 10, image: branco },
+  { id: 3, name: "Rosa", price: 30, image: rosa },
 ];
 
 export default function Roscas() {

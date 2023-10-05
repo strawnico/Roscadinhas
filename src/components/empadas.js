@@ -11,7 +11,6 @@ import alho from "../assets/alho.jpg";
 import shitake from "../assets/shitake.jpg";
 import espinafre from "../assets/espinafre.JPG";
 import grao from "../assets/grao.jpg";
-import { Icon } from "@iconify/react";
 import Item from "./item";
 import React, { useState } from "react";
 import {
@@ -20,9 +19,9 @@ import {
 } from "../localStorageUtils";
 
 const foodMenu = [
-  { id: 1, name: "frango", price: "20,30", image: frango },
-  { id: 2, name: "carne", price: 10, image: carne },
-  { id: 4, name: "camarao", price: 30, image: camarao },
+  { id: 1, name: "Frango", price: "5,99", image: frango },
+  { id: 2, name: "Carne", price: "6,49", image: carne },
+  { id: 4, name: "Camarão", price: "8,50", image: camarao },
 ];
 
 export default function Empadas() {
@@ -86,28 +85,7 @@ export default function Empadas() {
         ))}
       </div>
 
-      {/* <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={frango} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Frango com catupiry</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$5,99</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
-
-                <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
-                    <img src={carne} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
-                    <h4 style={{ color: '#ad851a' }}>Carne</h4>
-                    <div style={{ flexDirection: "row", display: 'flex', justifyContent: 'center' }}>
-                        <h3 style={{ color: '#ad851a', fontWeight: 'bold', paddingRight: '20%', fontSize: '20px', marginTop: '5px' }}>R$6,49</h3>
-                        <div>
-                            <Icon icon="bxs:cart" color="#ad851a" width="25" />
-                        </div>
-                    </div>
-                </button>
+      {/* 
 
                 <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
                     <img src={camarao} style={{ width: "100%", paddingTop: "20px", borderRadius: "10%", paddingRight: '50px' }} />
