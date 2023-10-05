@@ -84,7 +84,9 @@ export default function Empadas() {
           <Item key={food.id} food={food} onAddToCart={addToCart} />
         ))}
       </div>
-
+        <div className="littleCarrinho" style={{ position: "fixed", backgroundColor:"#DEB852", width:"100%", height:"50px", bottom:"0", alignItems:"center", justifyContent:"center", display:"flex" }}>
+          <a style={{ textDecoration:'none', color:"black", fontSize:"20px"}} href="./carrinho">Ir para o carrinho</a>
+        </div>
       {/* 
 
                 <button style={{ width: '200px', marginRight: '50px', marginTop: '20px', marginLeft: '40px', backgroundColor: '#FAF0C4', borderColor: '#ad851a' }}>
